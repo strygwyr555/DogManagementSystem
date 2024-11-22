@@ -32,6 +32,11 @@ public class DogController {
 //		return "home";
 //	}
 	
+	@RequestMapping("/")
+	public String defaultRoute() {
+    		return "redirect:/dogHome";
+	}
+	
 	@RequestMapping("dogHome")
 	public ModelAndView home() {
 		mv.setViewName("home");		
